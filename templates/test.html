@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <script src="/static/js/common.js"></script>
+</head>
+<body>
+    {% load socialaccount %}
+    <button onclick="loading_data_test()">點我測試ajax</button>
+    <button onclick="test_obj_click()">點我測試</button>
+    <a href="{% provider_login_url 'google' %}"> Google 登入 </a>
+    <a href="/accounts/logout"> 登出 </a>
+</body>
+</html>
+<script type="text/javascript">
+    function loading_data_test() {
+        $.ajaxSettings.async = false;
+        var show_data = '';
+        show_data += '<ul>'
+        $.get('/Women/ajax_woman_goods_info',{'GOODS':'ALL_GOODS'},function (data) {
+            $.each(data,function (index,obj) {
+                show_data += load_goods_template(obj.pk, obj.fields.Images_url, obj.fields.title, obj.fields.price, obj.fields.heart,obj.fields.goods_put_on);
+            })
+        },'json')
+        $.ajaxSettings.async = true;
+        console.log(show_data);
+        show_data += '</ul>'
+        $('body').html(show_data);
+    }
+    function test_obj_click() {
+        var show_data = '';
+        show_data = '<ul>';
+        $.ajaxSettings.async = false;
+        $.get('/Women/ajax_woman_goods_info',{'GOODS':'ALL_GOODS'},function (data) {
+            show_data += test_obj(data);
+        },'json')
+        $.ajaxSettings.async = true;
+        $('body').html(show_data);
+    }
+</script>
+
+

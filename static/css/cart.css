@@ -1,0 +1,663 @@
+
+
+
+/* 購買結帳 流程 顯示指引 */
+/* 去除 number 瀏覽器原設定新增按鈕*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+
+
+
+
+/* cart 主體*/
+.cart_main{
+    width: 100%;
+    margin: 130px auto;
+}
+
+
+/* cart_process  購買流程*/
+.cart_process{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+.cart_process .process{
+    background: #c6bdbd;
+    width: 130px;
+    height: 100px;
+    display: inline-block;
+    margin: 0px 35px;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Microsoft JhengHei;
+    color: #eae0e0;
+    border-radius: 20%;
+}
+
+.cart_process .process.open{
+    background: #3e7286;
+    color: #ebebeb;
+}
+
+
+.arrow{
+    width: 40px;
+    height: 10px;
+    display: none;
+    background: #3e7286;
+    float: right;
+    position: relative;
+    right: -50px;
+    top: -50px;
+}
+
+.arrow::before{
+    content: '';
+    width: 25px;
+    height: 10px;
+    display: block;
+    float: right;
+    position: relative;
+    transform: rotate(45deg);
+    background: #3e7286;
+    right: -11px;
+    top: -6px;
+}
+
+.arrow::after{
+    content: '';
+    width: 25px;
+    height: 10px;
+    display: block;
+    float: right;
+    position: relative;
+    transform: rotate(-45deg);
+    background: #3e7286;
+    right: -11px;
+    top: -5px;
+}
+
+
+/* ==================================1. cheack cart 頁面====================================begin */
+/* 購物車商品 顯示*/
+
+.cart_goods_container{
+    width: 70%;
+    border: 3px solid #a79f9f;
+    margin: 50px auto 150px;
+}
+
+.cart_goods_list{
+    width: 100%;
+}
+
+.cart_goods_list .cart_goods_info{
+    margin: 25px auto;
+    width: 90%;
+    height: auto;
+}
+
+
+.cart_goods_list .cart_goods_info>li{
+    margin: 10px 20px 20px 20px;
+    float: left;
+    width: 90%;
+    border: 2px solid #0e3047;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all .6s;
+}
+
+.cart_goods_list .cart_goods_info>li:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 0px 10px 5px #8b8282
+}
+
+
+
+
+.cart_goods_list .cart_goods_info>li>.img_content{
+    float: left;
+    width: 30%;
+}
+
+.cart_goods_list .cart_goods_info>li>.img_content>a>img{
+    width: 80%;
+    border-radius: 10%;
+    transition: all .6s;
+}
+
+
+.cart_goods_list .cart_goods_info>li>.img_content>a>img:hover{
+    border: 2px dashed #0e3047;
+    transform: scale(1.05);
+}
+
+
+
+
+.cart_goods_desc{
+    float: left;
+    width: 45%;
+}
+
+
+/* goods_type*/
+.cart_goods_desc .goods_type{
+    font-weight: bold;
+    margin: 5px 0px 10px 0px;
+    color: #828689;
+    font-size: 1.3rem;
+}
+
+
+/* goods_title_name*/
+.cart_goods_desc .goods_name{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #0e3047;
+}
+
+/* goods_price */
+.cart_goods_desc .goods_price{
+    font-weight: bold;
+    margin: 30px 0px 30px 0px;
+    font-size: 0.9rem;
+    color: #0e3047;
+}
+
+
+
+
+
+/* 處理 size 和 color 樣式*/
+.amount_change .goods_size .goods_size_text,.goods_color_text{
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0e3047;
+}
+
+
+/* size background*/
+.amount_change .goods_size .goods_size_text .goods_size_background{
+    margin-left: 5px;
+    color: #FFFFFF;
+    background: black;
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10%;
+}
+
+/* color background */
+.amount_change .goods_size .goods_color_text .goods_color_background{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+    top: 6px;
+    border-radius: 15px;
+    border: 1px dashed black;
+}
+
+
+
+
+/* amount text h4*/
+.amount_change h4{
+    font-weight: bold;
+}
+
+
+.amount_change button{
+    border: none;
+    background: #8b8484;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: all .6s;
+    line-height: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.amount_change button:hover{
+    background: #232323;
+}
+
+.amount_change input[type=number]{
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 單鍵商品總額 */
+.singo_goods_total_price{
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3e606f;
+    position: relative;
+    top: -120px;
+    right: -25px;
+}
+
+.delete_goods{
+    float: right;
+    width: 10%;
+    line-height: 17rem;
+    margin:0px 50px 0px 15px;
+    text-align: center;
+}
+
+.delete_goods button{
+    background: #668399;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: all .9s;
+    font-weight: bold;
+}
+
+.delete_goods button:hover{
+    background: #2d373e;
+}
+
+
+
+/* ==================================1. cheack cart 頁面==================================== end */
+
+
+
+
+/* ==================================2. pay and send 頁面==================================  begin*/
+.cart_pay_send{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.cart_pay_send h3{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.cart_pay_send .radio_group{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    width: 70%;
+    border-bottom: 1px solid #cdc0c0;
+    margin: 40px auto 40px;
+    color: #3e606f;
+    padding-bottom: 10px;
+}
+
+
+
+/* 設置 radio選單樣式*/
+.cart_pay_send .radio_group input[type=radio]{
+    visibility: hidden;
+}
+
+
+.cart_pay_send .radio_group>.radio_label{
+    cursor: pointer;
+}
+
+.cart_pay_send .radio_group>.radio_label:hover{
+    color: #1a2124;
+}
+
+
+.cart_pay_send .radio_group>.radio_label>.radio_button{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 1px solid #24404b;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+}
+
+
+.cart_pay_send .radio_group>.radio_label>.radio_button::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1a2124;
+    position: relative;
+    top: 3px;
+    right: -2px;
+    /* 設置點擊位置移動顯示   */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.radio_input:checked ~ .radio_label .radio_button::after{
+  /* 選中radio時 才顯示中間點點 */
+  opacity: 1;
+}
+
+.add_infomation h4>.pay_goods_amount{
+    color: red;
+    font-weight: bold;
+}
+/* ================================== 2. pay and send 頁面==================================  end*/
+
+
+/* ================================== 3. add information 頁面 =============================== begin */
+.add_infomation{
+    margin: 30px auto ;
+    width: 100%;
+}
+
+.add_infomation h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #24404b;
+}
+
+.add_infomation h3>.pay_goods_price{
+    color: red;
+}
+
+.add_infomation h4{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #24404b;
+}
+
+.add_information_text{
+    width: 100%;
+}
+
+.add_information_text li{
+    border-bottom: 1px solid grey;
+    padding: 15px 0px;
+    width: 75%;
+    margin: 0px auto 30px;
+}
+
+
+
+.add_information_text h2{
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 2px solid #a79f9f;
+    border-bottom: 2px solid #a79f9f;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+
+.add_information_text li>b{
+    margin-right: 60px;
+    font-size: 14px;
+    padding-left: 70px;
+}
+
+.add_information_text li>input[type=text]{
+    border: none;
+    height: 35px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+/* ================================== 3. add information 頁面 =============================== end */
+
+
+/*====================================4. Order Complete  頁面 ================================ begin */
+
+.order_complete{
+    margin: 40px auto;
+    text-align: center;
+}
+
+
+.order_complete img{
+    width: 15%;
+    border-radius: 50%;
+}
+
+
+
+.order_complete h2{
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.order_complete h2>.order_no{
+    color: red;
+}
+
+.order_complete h3{
+    font-weight: bold;
+}
+
+.Order_info{
+    margin-top: 20px;
+}
+
+
+.change_url_button{
+    margin: 30px auto;
+}
+
+
+.change_url_button button{
+    border: none;
+    outline: none;
+    background: brown;
+    color: white;
+    width: 140px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .6s;
+}
+
+
+.change_url_button button>a{
+    color: white;
+}
+
+.change_url_button button:hover{
+    background: darkred;
+}
+
+
+
+/*====================================4. Order Complete  頁面 ================================ end */
+
+
+
+
+
+
+
+/* ===================商品總額及數量 div 樣式設定 ===================================== begin*/
+
+/* 商品加總金額 total_price*/
+.total_price_container{
+    height: 200px;
+    background: #f1eaea;
+    clear: both;
+    border-top: 2px solid #a79f9f;
+}
+
+
+/* 以 table 顯示價格 及數量*/
+
+/* 1. 設置 商品件數 class = cart_goods_amount*/
+.cart_goods_amount{
+    font-weight: bold;
+    color: red;
+}
+
+
+/* table */
+.total_price_container .total_price_table{
+    float: right;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.total_price_container .total_price_table tr{
+    font-weight: bold;
+    font-size: 18px;
+    color: #3e606f;
+    height: 50px;
+}
+
+.total_price_container .total_price_table .pay_total{
+    color: red;
+}
+
+.total_price_container .total_price_table .pay_total>th{
+    border-top: 1px solid #cbc6c6;
+}
+
+
+/* 設置 商品總價格 class=cart_goods_total_price */
+.cart_goods_total_price{
+    font-weight: bold;
+    color: red;
+}
+
+
+
+
+
+
+
+
+/* 設置 cart_next_button */
+.cart_next_button{
+    clear: both;
+    background: #f1eaea;
+    padding: 0px 50px 15px;
+
+}
+
+.cart_next_button button{
+    border: none;
+    outline: none;
+    background: brown;
+    color: white;
+    width: 140px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .6s;
+}
+
+.cart_next_button input[type=submit]{
+    border: none;
+    outline: none;
+    background: brown;
+    color: white;
+    width: 140px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .6s;
+    float: right;
+    display: none;
+}
+
+
+
+.cart_next_button input[type=submit]:hover{
+    background: darkred !important;
+}
+
+
+.cart_next_button .cart_next{
+    float: right;
+}
+
+.cart_next_button .cart_back>a ,.cart_next >a{
+    color: white;
+}
+
+.cart_next_button button:hover{
+    background: darkred;
+}
+
+/*=============================================== Cart_Empty  cart is empty css ==== */
+.no_goods_in_cart{
+    width: 60%;
+    border: 5px solid grey;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.no_goods_title{
+    color: #0f1452;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+
+.no_goods_in_cart_img_content{
+    width: 65%;
+    margin: 15px auto;
+}
+
+.no_goods_in_cart_img_content img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.to_goods_index_button{
+    width: 70px;
+    height: 30px;
+    margin: 20px 0px 20px 0px;
+    background: #0b273b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}

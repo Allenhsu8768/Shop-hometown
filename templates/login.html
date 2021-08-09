@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hometown</title>
+    <meta charset="UTF-8">
+    <meta nam="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 載入網站小圖       -->
+    <link rel="shortcut icon" href="/static/images/EwBpRdVd36_1.ico" type="/static/images/x-icon">
+    <!-- 載入 login_register.css 樣式腳本   -->
+    <link rel="stylesheet" type="text/css" href="/static/css/login_register.css">
+    <!-- 載入 login_reg_mobile.css  -->
+    <link rel="stylesheet" type="text/css" href="/static/css/login_reg_mobile.css">
+    {#  載入 jquery 函數庫  #}
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    {#  載入 login_register.js 腳本  #}
+    <script src="/static/js/login_register.js"></script>
+    {# 載入 設計的 alert 樣式#}
+    <script src="/static/js/alert.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+{% block register_main %}
+    {# 1.msg1 用戶名稱不存在  #}
+    {# 判斷信息   #}
+    {% if msg1 %}
+        <script type="text/javascript">
+            {#   傳入參數 loginerror = 1 ,表示 msg1 存在的錯誤, 參數 url ,是讓用戶點選 確認後 頁面重新跳轉到 login     #}
+            {#  必須設置加載完才面,才可以跑出彈框,否則,alert 會獲取不到節點鎖住按鈕          #}
+            $(function () {
+                alert('用戶名稱不存在,請至註冊頁面註冊用戶!',errmsg=1);
+            })
+        </script>
+    {# 2.msg2 表示 用戶密碼輸入錯誤請檢查 #}
+    {% elif msg2 %}
+        <script type="text/javascript">
+            $(function () {
+                alert('用戶輸入的密碼有誤,請重新確認密碼!',errmsg=1)
+            })
+        </script>
+    {% endif %}
+
+
+    <div class="login_reg_background_img">
+        <img src="/static/images/login_bakground_img.jpg">
+    </div>
+    <!--用戶登入表單    -->
+    <div class="login_main">
+        <div class="login_header">
+            <!-- 登入表單框 標題 -->
+            <h1>Login !</h1>
+        </div>
+        <p></p>
+        <form action="/login/" method="post" class="login_form">
+            {# post 表單設置           #}
+            {% csrf_token %}
+            <ul class="right-form">
+                <!-- 登入表單框 標題 -->
+                <h2>Login:</h2>
+                <div id="move-right-form">
+                    <!-- username  -->
+                    <li>
+                        <input type="text" name="username" placeholder="Username" maxlength="20" required/>
+                    </li>
+                    <!-- password           -->
+                    <li>
+                        <input type="password" name="password" placeholder="Password" maxlength="20" required/>
+                    </li>
+                    <!-- 記住密碼    -->
+                    <li>
+                        <input type="checkbox" name="is_saved" checked>
+                        <span>記住密碼</span>
+                    </li>
+                    <!--  設置隱藏表框方便頁面跳轉 , 透過 request.META.HTTP_REFERER 獲取前一個網頁URL         -->
+                    <input type="hidden" name="source_url" value="{{request.META.HTTP_REFERER}}">
+                    <li>
+                        <!--  提交按鈕          -->
+                        <input type="submit" value="Login" id="send_login_msg">
+                        <button><a href="/register">Register</a></button>
+                        <button><a href="/">Back Home</a></button>
+                    </li>
+                </div>
+                <!--  加入 div 標籤 清除浮動          -->
+                <div class="clear"></div>
+            </ul>
+        </form>
+    </div>
+</div>
+{% endblock %}
+</body>
+<script type="text/javascript">
+</script>
+</html>

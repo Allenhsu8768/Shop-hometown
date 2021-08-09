@@ -1,0 +1,32 @@
+@media screen and (max-width: 1366px){
+    .reg_main{width: 45%}
+    .login_main{width: 50%}
+}
+
+@media screen and (max-width: 1200px){
+    .reg_main{width: 60%; margin: 200px auto;}
+    .login_main{width: 70%; margin-top: 20em;}
+}
+
+@media screen and (max-width: 790px){
+    .login_main{width: 90%}
+}
+
+
+@media screen and (max-width: 850px){
+    .reg_main{width: 75%}
+}
+
+@media screen and (max-width: 670px){
+    .reg_main{width: 95%}
+    .login_main{width: 100%}
+}
+
+@media screen and (max-width: 560px){
+    .reg_main{width: 100%}
+    .login_main{width: 110%}
+}
+
+@media screen and (max-width: 520px){
+    .reg_main{width: 105%}
+}

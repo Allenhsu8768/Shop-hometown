@@ -1,0 +1,108 @@
+/*==========================設置 gbook 主體樣式 begin ===================*/
+
+
+.pagebg{
+    margin:0px auto;
+    padding: 200px 0px;
+    text-align: center;
+    width: 80%;
+    margin-top: 95px;
+}
+
+/* 設置 圖片樣式放置位置*/
+.sh{
+    background: url("../images/gbook_img.jpg") no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+
+.gbook_main{
+    width: 80%;
+    margin: 0px auto;
+}
+
+
+
+h1.t-nav{
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.n1{
+    width: 100px;
+    display: block;
+    text-align: center;
+    float: left;
+    color: #fff;
+    background: #232945;
+}
+
+
+/* 設置 評論留言板面樣式*/
+.commentlist{
+    color: #666666;
+    list-style-type: none;
+    padding: 10px 12px;
+}
+
+.commentlist a{
+    color: #0066cc;
+}
+
+.commentlist a:hover{
+    color: #db5104;
+    border-bottom: 1px solid #db5104;
+}
+
+.commentlist li{
+    border-bottom: 1px solid #e3e5e4;
+    padding: 15px 5px 30px 5px;
+}
+
+.reply{
+    padding-left: 30px;
+}
+
+
+
+/* 設置會員留言樣式*/
+
+#respond{
+    font-size: 18px;
+    color: #3e606f;
+    margin-bottom: 15px;
+    margin-top:10px;
+    font-weight: bold;
+}
+
+#commentform p{
+    margin-bottom: 15px;
+}
+
+#commentform input[type='submit']{
+    margin-left: 12px;
+    background-color: #f9f9f9;
+    border:2px solid #e3e5e4;
+    width: 80px;
+    padding: 2px 5px;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
+
+#commentform input[type='submit']:hover{
+    background-color: #3e606f;
+    color: #EBEBEB;
+}
+
+#commentform textarea{
+    width: 450px;
+    height: 200px;
+}

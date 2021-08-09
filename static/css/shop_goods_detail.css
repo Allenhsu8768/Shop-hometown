@@ -1,0 +1,783 @@
+.goods_detail_main{
+    width: 75%;
+    margin: 130px auto;
+    position: relative;
+    right: -25px;
+}
+
+
+/* small img 塊 10% */
+.other_goods_img_change{
+    width: 10%;
+    float: left;
+    margin-right: 5px;
+}
+
+/* li 的 small img 80% */
+.other_goods_img_change li>img{
+    width: 70%;
+    margin-bottom: 10px;
+    transition: all .9s;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+.other_goods_img_change li>img:hover{
+    transform: scale(1.05);
+    border: 1px solid #9e9898;
+}
+
+
+
+/* detail img 塊區 40%*/
+.goods_detail_main .goods_detail_box .goods_detail_img{
+    float: left;
+    width: 40%;
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+
+/* detail img 100% */
+.goods_detail_main .goods_detail_box .goods_detail_img>img{
+    width: 100%;
+}
+
+
+
+/*goods_desc 樣式*/
+.goods_detail_main .goods_detail_box .goods_desc{
+    float: left;
+    width: 30%;
+}
+
+.goods_desc h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #364047;
+}
+
+
+.goods_desc .goods_price{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+
+.goods_desc .goods_shown, .goods_size_content{
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+}
+
+
+
+/* 設置 color 點選 的 radio 按鈕 */
+.color_change{
+    margin: 15px 0px;
+    float: left;
+    position: relative;
+    right: 0px;
+    top: -30px;
+}
+
+
+#color_change_frm{
+    float: left;
+    width: 100%;
+}
+
+
+#color_change_frm .radio-group{
+    float: left;
+    width: 42px;
+}
+
+
+
+#color_change_frm .radio-group .click_color_border{
+    float: left;
+    width: 40px;
+    width: 40px;
+}
+
+
+
+#color_change_frm .radio-group input[type=radio]{
+    visibility: hidden;
+}
+
+
+
+
+ #color_change_frm .radio-group>.click_color_border>.radio-label{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    right: -7px;
+    cursor: pointer;
+    transition: all .5s;
+    z-index: 50;
+}
+
+#color_change_frm .radio-group>.click_color_border>.radio-label>span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #a8a0a0;
+    position: relative;
+    top: -3px;
+    right: 3px;
+    z-index: 5;
+}
+
+
+#color_change_frm .radio-group>.click_color_border>.radio-label>span:hover{
+    border: 1px solid #1f1d1d !important;
+}
+
+
+
+#color_change_frm .radio-group>.click_color_border>.radio-label:hover{
+    transform: scale(1.07);
+}
+
+
+
+.size_click{
+    clear: both;
+    float: left;
+    position: relative;
+    top: -30px;
+    right: 0px;
+    width: 80%;;
+    text-align: center;
+}
+
+.size_click li{
+    float: left;
+    border: 1px solid #999999;
+    /*width: 35px;*/
+    background: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+/* 如果尚未點擊過,則按照較深的背景顏色*/
+.size_click .size_ul>li:hover{
+    background: #364047 !important ;
+    color: #EBEBEB !important;
+}
+
+
+/* 點擊後,第一次 size ,如果要再選第二次背景色要改變較淺*/
+.size_click .size_ul>li.open:hover{
+    background: #8fa4b6 !important;
+    color: #EBEBEB !important;
+}
+
+.size_ul input[type=radio]{
+    display: none;
+}
+
+.size_ul label{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0.6rem;
+}
+
+/* detail 詳細衣服資訊*/
+
+/* ============================================ detail 商品 點擊 (size & fit 、 Detail & Material) 樣式 設置  begin ========================= */
+.goods_other_detail-wrapper{
+    margin-top: 20px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.goods_other_detail_list{
+    background: #f1eaea;
+    margin-bottom: 10px;
+}
+
+.goods_other_detail-wrapper .goods_other_detail_list button{
+    background: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    outline: none;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+.goods_other_detail_list button>.icon>.detail_icon{
+    width: 13px;
+    height: 3px;
+    background: #a2b7c6;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+
+.goods_other_detail_list button>.icon>.detail_icon:before{
+    content:'';
+    width: 13px;
+    height: 3px;
+    background: 3px;
+    background: #a2b7c6;
+    display: block;
+    position: relative;
+    transform: rotate(90deg);
+}
+
+.size_fit.open .icon>.detail_icon:before{
+    display: none;
+}
+
+
+
+.detail_meterial.open .icon>.detail_icon:before{
+    display: none;
+}
+
+
+.goods_other_detail-wrapper .goods_other_detail_list button:hover{
+    background: #53758d;
+    color: #EBEBEB;
+}
+
+
+
+.goods_other_detail_list .detail_info{
+    background: #f1eaea;
+    display: none;
+}
+
+
+.detail_info h3{
+    font-weight: bold;
+    color: #3e606f;
+    text-align: center;
+}
+
+.detail_info h4{
+    font-weight: 700;
+    color: grey;
+    text-align: center;
+}
+
+.detail_info h5{
+    font-weight: 600;
+    color:#3e606f;
+    text-align: center;
+}
+
+
+.goods_detail_size_fit{
+    width: 85%;
+    margin: 10px auto;
+    transition: all .3s;
+}
+
+.goods_detail_size_fit:hover{
+    border: 2px dashed #364047;
+}
+
+.goods_detail_size_fit li{
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+}
+
+.goods_detail_size_fit li>b{
+    float: right;
+}
+
+.goods_other_detail_list .detail_info>.look_size_fit_footer{
+    text-align: center;
+    background: #364047;
+    transition: all .9s;
+}
+
+.goods_other_detail_list .detail_info>.look_size_fit_footer>a{
+    color: #EBEBEB;
+}
+
+
+.goods_other_detail_list .detail_info>.look_size_fit_footer:hover{
+    background: #3e606f;
+}
+
+.goods_other_detail_list .detail_info>.goods_detail_content{
+    width: 180px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px auto;
+}
+
+
+
+/* ============================================ detail 商品 點擊 (size & fit 、 Detail & Material) 樣式 設置  end ========================= */
+
+/* ============================================ 設置 購買 商品表單送出 及數量 */
+.add_cart_goods{
+    margin: 20px auto;
+    clear: both;
+    width: 100%;
+}
+
+/* 利用外面的 div 修改 select 樣式 */
+
+.option select{
+    width: 90px;
+    height: 30px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+/* 設置 提交送出的樣式*/
+.option input[type=submit]{
+    background: #095709;
+    color: #EBEBEB;
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all .9s;
+}
+
+.option input[type=submit]:hover{
+    background: #0b7f0b;
+}
+
+
+/*==================================設置 user cart 樣式 begin ==============================*/
+.user-cart-box {
+    position: fixed;
+    width: 13%;
+    background: url("images/img02.jpg") repeat-x left top;
+    right: 40px;
+    top: 140px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid #999999;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 19px 19px 19px 19px;
+}
+
+/* 設置 Your cart 標題*/
+.user-cart-box h4{
+    font-weight: bold;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+    color: #999999;
+    border-bottom: 2px solid #999999;
+    transition: all .3s;
+}
+
+
+/* 設置 屬標滑過 標題樣式改變*/
+.user-cart-box h4:hover{
+    background: #364047;
+    color: #EBEBEB;
+}
+
+
+/* 設置 user-cart-list 清單樣式*/
+.user-cart-box .user-cart-list{
+    display: none;
+    width: 100%;
+}
+
+
+
+
+/* 設置 span 三角標父元素樣式*/
+.open-close{
+    width: 100%;
+    background: #c1bdbd;
+    height: 20px;
+    text-align: center;
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+    top: 1px;
+}
+
+
+
+/* 設置 span 尚未點擊前的三角標*/
+.open-close .open-triangle{
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid black ;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    transition-duration: 700ms;
+}
+
+
+/*點擊 span 後的三角標 */
+.open-close .open-triangle.open{
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent ;
+    border-bottom: 6px solid #b31d1d;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: relative;
+    top: -15px;
+    cursor: pointer;
+    transition-duration: 700ms;
+}
+
+
+
+#buy_goods{
+    position: relative;
+    top: 0px;
+    border-top:2px solid #999999;
+    z-index: 50;
+    margin: 10px 0px 5px 0px;
+}
+
+#buy_goods button{
+    border: none;
+    background: #8b8484;
+    color: #EBEBEB;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 110px;
+    height: 20px;
+    outline: none;
+    transition: all .3s;
+    margin-top: 5px;
+}
+
+#buy_goods button a {
+    color: #EBEBEB;
+}
+
+#buy_goods button:hover{
+    background: #b61818;
+}
+
+#buy_goods button>a:hover{
+    color: #EBEBEB;
+}
+
+
+
+
+.user_cart_goods{
+    margin: 10px 0px;
+}
+
+.insert_cart_goods li{
+    margin-bottom: 18px;
+}
+
+/* 以下是 user_cart 的圖片、size、單樣商品總價格顯示 的 span 樣式*/
+
+
+.insert_cart_goods li .user_cart_info_content{
+    float: right;
+    position: relative;
+    margin: 5px 10px 0px 0px;
+    right: 3px;
+}
+
+.insert_cart_goods li .user_cart_info_content .user_cart_size{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    width: 25px;
+    height: 20px;
+    z-index: 500;
+    color: #ffffff;
+    line-height: 20px;
+    border-radius: 5px;
+    background: black;
+    margin-bottom: 5px;
+}
+
+.insert_cart_goods li .user_cart_info_content .user_cart_amount{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    top: 30px;
+    right: -5px;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    z-index: 500;
+    color: #ffffff;
+    background: #f2a312;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+.insert_cart_goods li .user_cart_info_content .user_cart_price{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    width: 30px;
+    height: 20px;
+    z-index: 500;
+    color: #ffffff;
+    line-height: 20px;
+    border-radius: 5px;
+    background: #c70d0d;
+    margin-bottom: 5px;
+}
+
+
+
+.insert_cart_goods li>a>img{
+    width: 65%;
+    border-radius:10px;
+    transition: all 1.0s;
+}
+
+.insert_cart_goods li>a>img:hover{
+    border: 1px dashed #364047;
+    transform: scale(1.05);
+}
+
+
+.insert_cart_goods .delet-cart-goods{
+    display: none;
+    float: right;
+    position: relative;
+    right: 50px;
+    top: -25px;
+    border: none;
+    outline: none;
+    background: #EBEBEB;
+    color: #364047;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    width: 45%;
+    margin-right: 20px;
+}
+
+.insert_cart_goods .delet-cart-goods:hover{
+    background: #364047 !important;
+    color: #EBEBEB !important;;
+}
+
+
+/*========================================== user-cart-list  end== change=============================*/
+
+
+/* ========= click size & fit > button to view size & fit Guide==================== begin=====*/
+
+
+
+/* size_fit_container */
+.size_fit_container{
+    clear: both;
+    width: 80%;
+    margin: 40px;
+    position: relative;
+}
+
+
+
+/* =========== size 說明小圖=====================================begin*/
+/* btn_view_size_fit_box */
+.btn_view_size_fit_box{
+    width: 100%;
+    background: #f1eaea;
+    float: left;
+}
+
+/* size ul */
+.size_fit_detail{
+    float: left;
+    background: white;
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.size_fit_detail h3{
+    font-weight: bold;
+    color: #364047;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.size_fit_detail .model_info{
+    font-weight: 700;
+    font-size: 12px;
+    padding-bottom: 15px;
+    color: #174b6f;
+    border-bottom: 1px solid #999999;
+
+}
+
+
+.size_fit_detail ul>li{
+    font-weight: bold;
+    margin: 5px;
+    color: #999999;
+}
+
+
+.size_fit_detail ul>h4{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #3e606f;
+}
+
+
+
+
+.size_fit_detail ul>li>b{
+    float: right;
+}
+
+
+
+/* img */
+.size_fit_background_img{
+    float: right;
+    width: 60%;
+    position: relative;
+    right: 0px;
+}
+
+.size_fit_background_img img{
+    width: 50%;
+    margin-right: -3px;
+}
+
+/* =========== size 說明小圖=====================================end*/
+
+
+
+/* ====== size 對照表(cm) button ===== begin*/
+
+
+.size_Control{
+    width: 100%;
+    margin: 30px auto;
+    clear: both;
+    background: white;
+    text-align: center;
+    height: 650px;
+}
+
+
+/* 調整點選的 button 樣式*/
+.size_Control .size_Description{
+    margin: 0px auto;
+    padding-top: 15px;
+    width: 85%;
+    border-bottom: 2px solid #999999;
+}
+
+
+.size_Description .btn_Description{
+    border: none;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    padding: 5px;
+    color: #939597;
+    width: 40%;
+    margin-bottom: 5px;
+}
+
+
+.size_Description .btn_Description:hover{
+    color: #0b273b !important;
+}
+
+
+
+/* size  cm 對照表*/
+
+.size_table{
+    float: left;
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+}
+
+
+
+.size_table h5{
+    font-weight: bold;
+    color: #3e606f;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.size_table p{
+    font-weight: bold;
+}
+
+
+.size_table .size_length{
+    margin: 20px auto;
+    width: 60%;
+    background: #f1eaea;
+}
+
+.size_table .size_length th{
+    color: #4e4949;
+}
+
+
+
+
+
+/* how to measure */
+.how_to_measure{
+    width: 100%;
+    clear: both;
+    background: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+.how_to_measure p{
+    font-weight: bold;
+    color: #18547d;
+    font-size: 15px;
+    width: 70%;
+    margin: 15px auto;
+}
+
+.how_to_measure img{
+    width: 42%;
+}
