@@ -100,8 +100,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'shop_hometown',
         'USER':'root',
-        'PASSWORD':'pplikuaqww789',
-        'HOST':'localhost',
+        'PASSWORD':'xxxxxxx',
+        'HOST':'xxxxxxx',
         'PORT':3306,
     }
 }
