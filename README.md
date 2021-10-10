@@ -4,9 +4,8 @@
 ### Tools(sql): Mysql
 
 ## 環境建置資料夾
-##  
-
-
+##  環境資料夾 backend_env
+##  資料庫匯入 mysql_info_import
 
 # 頁面配置如下:
 
