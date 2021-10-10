@@ -1,0 +1,345 @@
+{% extends 'index.html' %}
+
+{% block other_css %}
+<script src="/static/js/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.structure.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.theme.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/shop_description.css">
+{% endblock %}
+
+{% block wrapper_main %}
+<div style="height: 120px"></div>
+<!--  所有頁籤的問題      -->
+<div id="tabs">
+    <ul>
+        <li><a href="#tab1">會員常見問題</a></li>
+        <li><a href="#tab2">購物常見問題</a></li>
+        <li><a href="#tab3">配送取貨問題</a></li>
+        <li><a href="#tab4">退換貨及退款</a></li>
+    </ul>
+    <!--  會員常見問題      -->
+    <div id="tab1">
+        <div class="tab">
+            <span>會員常見問題</span>
+        </div>
+        <div class="user_question_more">
+            <h4><a href="#1">Q1:如何加入會員？</a></h4>
+            <h4><a href="#2">Q2:如何修改個人資料及密碼？</a></h4>
+            <h4><a href="#3">Q3:如何聯繫客服？</a></h4>
+            <h4><a href="#4">Q4:如何查詢訂單資料？</a></h4>
+            <h4><a href="#5">Q5:如何查詢消費紀錄？</a></h4>
+        </div>
+        <!-- Q1:               -->
+        <div class="user_question">
+            <a name="1"><h4>Q1:如何加入會員?</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <b>
+                    電腦版：請您點選右上角「Login/Register」,填寫資料後可以進行註冊,註冊成功後,必須要進行信箱驗證才能購物。
+                </b>
+                <br>
+                <b>
+                    手機版：請您點選左上角展開後,選擇「Login/Register」,填寫資料後可以進行註冊,註冊成功後,必須要進行信箱驗證才能購物。
+                </b>
+            </p>
+        </div>
+        <!--  Q2:          -->
+        <div class="user_question">
+            <a name="2"><h4>Q2:如何修改個人資料及密碼？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <b>
+                    電腦版：請您點選右上角「Login」進行登入,登入完後,再到會員中心點選修改會員資料,確認無誤後送出。
+                </b>
+                <br>
+                <b>
+                    手機版：請您點選左上角展開後,選擇「Login」進行登入,登入完後,再到會員中心點選修改會員資料,確認無誤後送出。
+                </b>
+            </p>
+        </div>
+        <!--  Q3:          -->
+        <div class="user_question">
+            <a name="3"><h4>Q3:如何聯繫客服？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <b>
+                    電腦版：請您點選右上角「會員留言」,將問題發問在留言板上,客服會在線上直接進行回覆。
+                </b>
+                <br>
+                <b>
+                    手機版：請您點選左上角展開後,選擇「會員留言」,將問題發問在留言板上,客服會在線上直接進行回覆。
+                </b>
+            </p>
+        </div>
+        <!--  Q4:          -->
+        <div class="user_question">
+            <a name="4"><h4>Q4:如何查詢訂單資料？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <b>
+                    電腦版：請您點選右上角「Login」進行登入,登入完後,再點選右上角會員中心,點選訂單查詢可以得到訂購的貨物位置及出貨訊息。
+                </b>
+                <br>
+                <b>
+                    手機版：請您點選左上角展開後,選擇「Login」進行登入,登入完後,再到右上角會員中心,點選訂單查詢可以得到訂購的貨物位置及出貨訊息。
+                </b>
+            </p>
+        </div>
+        <!--  Q5:          -->
+        <div class="user_question">
+            <a name="5"><h4>Q5:如何查詢消費紀錄？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <b>
+                    電腦版：請您點選右上角「Login」進行登入,登入完後,再點選右上角會員中心,點選消費紀錄查詢可以得到訂購的貨物歷史訊息。
+                </b>
+                <br>
+                <b>
+                    手機版：請您點選左上角展開後,選擇「Login」進行登入,登入完後,再到右上角會員中心,點選消費紀錄查詢可以得到訂購的貨物歷史訊息。
+                </b>
+            </p>
+        </div>
+    </div>
+
+    <!--  購物常見問題      -->
+    <div id="tab2">
+        <div class="tab">
+            <span>購物常見問題</span>
+        </div>
+        <div class="user_question_more">
+            <h4><a href="#1">Q1:購物流程說明？</a></h4>
+            <h4><a href="#2">Q2:目前提供那些付款方式？</a></h4>
+        </div>
+        <!-- Q1:               -->
+        <div class="user_question">
+            <a name="1"><h4>Q1:購物流程說明？</h4></a>
+            <p class="user_answer">
+                <span>
+                    Hometown-商城 提供您簡單又安全的購物流程，親切易懂的指引式流程畫面，讓您充分享受便利的購物樂趣。
+                </span>
+                <br>
+                <b>
+                    第一次購物: 註冊帳號 > 信箱驗證帳號 > 選擇商品 > 加入購物車 > 前往結帳 > 填寫收件資訊 > 完成購物。
+                </b>
+                <br>
+                <b>
+                    非第一次購物: 登入帳號 > 選擇商品 > 加入購物車 > 前往結帳 > 填寫收件資訊 > 完成購物。
+                </b>
+            </p>
+        </div>
+        <!--  Q2:          -->
+        <div class="user_question">
+            <a name="2"><h4>Q2:目前提供那些付款方式？</h4></a>
+            <p class="user_answer">
+                <span>
+                    目前提供付款方式有五種：
+                </span>
+                <br>
+                <b>
+                    1. 『超商取貨付款』，提供取貨付款的超商通路包括：7-11、全家、萊爾富、OK
+                </b>
+                <br>
+                <b>
+                    2. 『信用卡』付款宅配到府（僅限台灣地區發行之VISA、Master Card、JCB信用卡）
+                </b>
+                <br>
+                <b>
+                    3. 宅配貨到付款（限台灣本島）
+                </b>
+                <br>
+                <b>
+                    4. LINE Pay（可用LINE Point折抵）
+                </b>
+                <br>
+                <b>
+                    5. Apple Pay（僅限使用iPhone手機）
+                </b>
+            </p>
+        </div>
+    </div>
+
+    <!--  配送取貨問題        -->
+    <div id="tab3">
+        <div class="tab">
+            <span>配送取貨問題</span>
+        </div>
+        <div class="user_question_more">
+            <h4><a href="#1">Q1:可選擇的配送方式有哪些？</a></h4>
+            <h4><a href="#2">Q2:運費如何計算？</a></h4>
+            <h4><a href="#3">Q3:如何更改訂購內容、送貨地址或取消訂單？</a></h4>
+            <h4><a href="#4">Q4:如何至門市取貨？</a></h4>
+
+        </div>
+        <!-- Q1:               -->
+        <div class="user_question">
+            <a name="1"><h4>Q1:可選擇的配送方式有哪些？</h4></a>
+            <table border="1px">
+                <thead>
+                    <tr style="background: gainsboro;">
+                        <th>付款方式</th>
+                        <th>配送方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>
+                            線上刷卡
+                            LINE Pay
+                            Apple Pay
+                        </th>
+                        <th>
+                            商品將以『黑貓宅急便』宅配方式寄出，宅配範圍目前限於台灣本島地區；
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            貨到付款
+                        </th>
+                        <th>
+                            商品將以『黑貓宅急便』宅配方式寄出，並於交付您貨物時收取貨款，貨物送達時會與您電話連絡，需請您務必保持電話暢通，不要拒接不認識的來電號碼，以免錯過貨物送達，連續配送三次均無法連絡，本訂單將自動取消喔！
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            超商取貨付款
+                        </th>
+                        <th>
+                            商品將配送至您所指定的門市，到店時將會發送取貨通知簡訊、E-mail或會員中心通知您前往取貨。
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--  Q2:          -->
+        <div class="user_question">
+            <a name="2"><h4>Q2:運費如何計算？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <ul>
+                    <li style="color: black">
+                        以下結帳方式之免運費標準，請依網站不定期公告之行銷活動為依據（唯訂單金額恕無法合併計算）。
+                    </li>
+                    <li>
+                        1. 7-11、全家、萊爾富、OK超商取貨付款訂單，單筆購物滿1000元，即享有免運費優惠。
+                        純商品金額購物未滿1000元(999元以下)，單筆訂單將酌收50元物流費
+                    </li>
+                    <li>
+                        2. 宅配訂單(付款方式：信用卡、貨到付款、LINE Pay及 Apple Pay)，單筆訂單將酌收60元物流費。
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <!--  Q3:          -->
+        <div class="user_question">
+            <a name="3"><h4>Q3:如何更改訂購內容、送貨地址或取消訂單？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <ul>
+                    <li style="color: black">
+                        1.修改訂單：
+                    </li>
+                    <li>
+                        訂單送出後即無法修改訂單內容，如需修改，您可由「會員登入」登入帳號，取消訂單後再重新下單。
+                    </li>
+                    <li style="color: black">
+                        2.取消訂單：
+                    </li>
+                    <li>
+                        訂單尚未進入包裝作業前您可由「會員登入」登入帳號，自行取消訂單，
+                        由「會員登入」登入帳號 > 進入「訂單查詢」狀態點選「取消訂單」，該筆訂單即完成取消訂單。
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <!--  Q4:          -->
+        <div class="user_question">
+            <a name="4"><h4>Q4:如何至門市取貨？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <ul>
+                    <li>
+                        待收到「貨到門市通知函」或簡訊後，請至您所指定之門市取貨並告知店員您的姓名且核對包裹姓名是否正確，並支付訂購商品金額即可，若您不克前往領取，建議您可請家人或朋友代領亦可。
+                        商品送達門市日起算7日內，請務必完成取件喔！(如：商品於10/1送達門市，請於10/8 23:59前完成取件，逾期則退回物流中心。
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <!--  退換貨及退款          -->
+    <div id="tab4">
+        <div class="tab">
+            <span>退換貨及退款</span>
+        </div>
+        <div class="user_question_more">
+            <h4><a href="#1">Q1.如何辦理退換貨？</a></h4>
+            <h4><a href="#2">Q2.退款方式及退款時間？</a></h4>
+        </div>
+        <!-- Q1:               -->
+        <div class="user_question">
+            <a name="1"><h4>Q1.如何辦理退換貨？</h4></a>
+            <p class="user_answer" style="margin-left: 20px; margin-bottom: 10px">
+                <ul>
+                    <li>
+                        請您於鑑賞期七日內利用線上申請【退貨服務】，持退貨代碼至超商辦理寄回,
+                        不論單件或組合價商品，保留商品仍享優惠，未達免運門檻運費不倒扣。
+                    </li>
+                    <li>
+                        正確的商品，請您直接重新下單訂購，以節省貨物因來回寄送所秏費的時間；
+                        如因商品瑕疵/配送錯誤造成重新訂購。
+                    </li>
+                    <li>
+                        申請退貨後，請於二日內至全省7-11、全家、萊爾富或OK辦理，請參考【退貨服務】使用說明。
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <!--  Q2:          -->
+        <div class="user_question">
+            <a name="2"><h4>Q2.退款方式及退款時間？</h4></a>
+            <table border="1px">
+                <thead>
+                    <tr style="background: gainsboro;">
+                        <th>原付款方式</th>
+                        <th>退貨作業時間</th>
+                        <th>退款方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>
+                            超商取貨付款
+                            <br>
+                            宅配貨到付款
+                        </th>
+                        <th rowspan="3">
+                            退貨包裏完成寄送後，
+                            約7-8個工作天完成退款作業
+                        </th>
+                        <th>
+                            完成商品驗收後的退貨退款，將暫存在您的個人帳號中，若您需要立即購物，則款項可直接抵扣。
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            信用卡結帳
+                            <br>
+                            Apple pay結帳
+                        </th>
+                        <th>
+                            退刷至原信用卡帳戶中
+                            由於完成退刷後，銀行間的作業處理約需7~14天，也因個人信用卡的結帳週期不同而影響退刷款項完成時間（負項可能會列在下期的帳單上）。
+                            關於「店家已刷退後的作業時間」，可洽詢您的信用卡發卡行。
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            LINE Pay結帳
+                        </th>
+                        <th>
+                            退款至您的LINE PAY帳戶，如欲詢問『店家已退款後的作業時間』，可洽詢LINE客服諮詢哦。請參考：https://contact-cc.line.me/serviceId/11866
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+   $('#tabs').tabs();
+   console.log('hello world');
+</script>
+{% endblock %}

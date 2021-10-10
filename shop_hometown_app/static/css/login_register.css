@@ -1,0 +1,378 @@
+/*登入籍註冊頁面樣式腳本*/
+
+/*============================Register and Login basic 設置 begin=============================================*/
+/*設置 基本 basic */
+body{
+	background:#eee;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 清除默認樣式 */
+body,h1,h2,h3,h4,h5,h6,ul,p,ol{
+    margin: 0px;
+    padding: 0px;
+    /* 取消無序列表項目符號*/
+    list-style-type: none;
+}
+
+
+/* 設置背景圖片樣式*/
+.login_reg_background_img img{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -100;
+}
+
+
+/*==================================Register and login end========================================================*/
+
+/*================================== Register form begin ===========================================*/
+/* 設置 Register 註冊的表單樣式*/
+
+.reg_main{
+    margin: 30px 20px 0px 150px;;
+    width: 40%;
+    background: #fff;
+    border-radius: 15px;
+}
+
+/* 設置標題 header */
+.register_header{
+    text-align:center;
+    padding: 1.3em;
+    background:#d5ceca;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* 設置標題 header  h1 字體樣式 */
+.register_header h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Brush Script MT","Brush Script Std",cursive;
+}
+
+/* 設置 reg_main 中 p 標籤 */
+.reg_main p{
+    text-align: center;
+    font-size: 15px;
+    color: #383737;
+    padding: 7px 30px;
+    border-bottom: 1px solid #E7E0E0;
+    margin-top: -30px;
+}
+
+/* 設置 表單 h2 標題標籤*/
+.reg_main h2{
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px 3px;
+    color: #3F3D3D;
+}
+
+/* 設置列表樣式浮動及邊距*/
+.left-form{
+    float: left;
+    margin: 10px 30px;
+    width: 80%;
+}
+
+
+
+/* 設置 表單格式*/
+.left-form input[type=text],.left-form input[type=email], .left-form input[type=password], .left-form input[type=date]{
+    float: left;
+    font-family: 'HelveticaNeue','Helvetica Neue', Helvetica, Arial,sans-serif;
+    width: 80%;
+    padding: 0.7em 2em 0.7em 1em;
+    border: none;
+    color: #000;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.left-form input{
+    margin-bottom: 10px;
+}
+
+
+.register_form{
+    background: #d5ceca;
+    border-radius: 5px;
+}
+
+
+/* 設置列表 li 元素*/
+.left-form li{
+    position: relative;
+    right: -45px;
+}
+
+/* 設置 提交 submit 樣式 */
+.left-form input[type=submit]{
+    padding: 8px 19px;
+    border-radius: 0.3em;
+    color: #4D4949;
+    border: 1px solid #EBEBEB;
+    font-weight: bold;
+    font-size: 15px;
+    /* 取消外邊輪廓*/
+    outline: none;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    margin: 10px 50px;
+}
+/* 設置回首頁按鈕 */
+.left-form button{
+    padding: 8px 30px;
+    border-radius: 0.3em;
+    border: 1px solid #EBEBEB;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.left-form button>a{
+    text-decoration: none;
+    color: #4D4949;
+    transition: all 0.5s ease-out;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/* 設置過度效果*/
+.left-form input[type=submit]:hover{
+    background:#2E2D2D;
+    color: #fff;
+}
+
+.left-form button:hover{
+    background: #2E2D2D;
+}
+
+.left-form button>a:hover{
+    color: #fff;
+}
+
+
+/* 設置用戶 user_name 驗證後的 圖片樣式顯示*/
+/* 1. 驗證成功 可以註冊樣式*/
+.check_user_name.can_register{
+    float: right;
+    width: 26px;
+    height: 27px;
+    margin: 5px;
+    background: url("images/register_check.jpg") no-repeat -13px -12px;
+}
+
+/* 2. 驗證失敗.not_register*/
+.check_user_name.not_register{
+    float: right;
+    width: 27px;
+    height: 27px;
+    margin: 5px;
+    background: url("images/register_check.jpg") no-repeat -13px -46px;
+}
+
+
+/* 設置 用戶 信箱驗證 */
+.check_user_email.can_register{
+    float: right;
+    width: 26px;
+    height: 27px;
+    margin: 5px;
+    background: url("images/register_check.jpg") no-repeat -13px -12px;
+}
+.check_user_email.not_register{
+    float: right;
+    width: 27px;
+    height: 27px;
+    margin: 5px;
+    background: url("images/register_check.jpg") no-repeat -13px -46px;
+}
+
+
+/*=============================================Register form end ========================================================*/
+
+
+/*=============================================Login form begin =========================================================*/
+
+.login_main {
+    width: 40%;
+    background: #fff;
+    border-radius: 15px;
+    margin: 10em auto;
+}
+
+.login_header{
+    text-align: center;
+    padding: 1.3em;
+    background: #d5ceca;
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.login_header h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Brush Script MT","Brush Script Std",cursive;
+}
+
+
+.login_main p{
+    text-align: center;
+    font-size: 15px;
+    color: #383737;
+    padding: 7px 30px;
+    border-bottom: 1px solid #E7E0E0;
+    margin-top: -30px;
+}
+
+.login_main h2{
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    margin:10px 3px;
+    color:#3F3D3D;
+}
+
+.login_form{
+    padding-bottom: 2em;
+    height: 220px;
+    background: #d5ceca;
+    border-radius: 5px;
+}
+
+.right-form{
+    float: left;
+    width: 70%;
+    margin: 10px 55px;
+}
+
+/* 調整 文本框樣式*/
+.right-form input[type=text],.right-form input[type=email], .right-form input[type=password]{
+    font-family: 'HelveticaNeue','Helvetica Neue', Helvetica, Arial,sans-serif;
+    width: 80%;
+    padding: 0.7em 2em 0.7em 1em;
+    border: none;
+    color: #000;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.right-form input{
+    margin-bottom: 15px;
+}
+
+#move-right-form{
+    position: relative;
+    right: -40px;
+}
+
+.right-form span {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.right-form input[type=submit]{
+    padding: 8px 19px;
+    border-radius: 0.3em;
+    color: #4D4949;
+    border: 1px solid #EBEBEB;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    margin:0px 10px 0px 20px;
+    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.right-form button{
+    padding: 8px 19px;
+    border-radius: 0.3em;
+    border: 1px solid #EBEBEB;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+
+.right-form button>a{
+    text-decoration: none;
+    color: #4D4949;
+    transition: all 0.5s ease-out;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+
+.right-form input[type=submit]:hover{
+    background: #2E2D2D;
+    color: #fff;
+}
+
+.right-form button:hover{
+    background: #2E2D2D;
+}
+
+.right-form button>a:hover{
+    color: #fff;
+}
+
+
+.clear{
+    clear: both;
+}
+
+
+
+/*設置 註冊地區及城市*/
+
+
+
+
+.select select{
+    border: none;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding:0.7em 1.5em 0.7em 0.5em;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 0 2px;
+    text-align: center;
+    text-align-last: center;
+    background: #f1edeb;
+}
+
+.select option{
+    font-weight: bold;
+}
+
+
+/* 生日 文本框提示*/
+.birthday_hit{
+    display: inline-block;
+    padding: 0.6em 0em 0.4em 0.6em;
+    font-weight: bold;
+    color: #0e3047;
+}

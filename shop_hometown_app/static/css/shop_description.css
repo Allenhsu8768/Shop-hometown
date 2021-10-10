@@ -1,0 +1,78 @@
+
+/* 商城說明樣式修改*/
+
+/* 頁籤 1 : 會員常見問題*/
+
+/*會員常見問題*/
+/* 標題樣式 */
+.tab{
+    color: #4b4747;
+    font-weight: bold;
+    font-size: 20px;
+    background: #c4bebe;
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    margin: 15px;
+}
+
+.tab span{
+    line-height: 32px;
+}
+
+
+/* 常見問題樣式*/
+.user_question_more{
+    margin-left: 50px;
+    border-bottom: 2px dashed #999999;
+}
+
+.user_question_more h4{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user_question_more h4>a:hover{
+    color: #999999;
+}
+
+
+/* 會員個別問題解答樣式*/
+.user_question{
+    margin-left: 15px;
+    border-bottom: 2px dashed #999999;
+}
+
+.user_question h4{
+    margin: 15px 0px 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user_question .user_answer{
+    margin-left: 20px;
+    margin-bottom: 10px
+}
+
+.user_question .user_answer span{
+    font-weight: bold;
+}
+
+.user_question .user_answer b{
+    color: #999999;
+}
+
+.user_question table{
+    margin-bottom: 20px;
+}
+.user_question table tbody th{
+    text-align: left;
+    color: #999999;
+}
+
+
+.user_question ul>li{
+    font-weight: bold;
+    color: #999999;
+}

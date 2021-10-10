@@ -1,0 +1,146 @@
+
+{% extends 'index.html' %}
+
+{#  引用 shop_gbook 樣式      #}
+{% block other_css %}
+<link rel="stylesheet" type="text/css" href="/static/css/gbook.css">
+{% endblock %}
+
+{% block wrapper_main %}
+        <!-- 設置留言板 圖片       -->
+        <div class="pagebg sh"></div>
+        <article style="margin-top: 20px">
+            <div class="gbook_main">
+                <h1 class="t-nav">
+                    <p class="n1">留言列表</p>
+                </h1>
+            <!-- 會員評論               -->
+            <!--     用戶頻論(父級評論)   -->
+                <ol class="commentlist">
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+            <!--    客服回復(子級貧論)               -->
+                        <li>
+                            <div class="reply">
+                                <div class="body">
+                                    謝謝評論!
+                                </div>
+                                <div class="top">
+                                    <a href="#" class="url">客服人員</a>
+                                    <span class="time">
+                                        @  2020-1-26 11:25
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+                        <li>
+                            <div class="reply">
+                                <div class="body">
+                                    謝謝評論!
+                                </div>
+                                <div class="top">
+                                    <a href="#" class="url">客服人員</a>
+                                    <span class="time">
+                                        @  2020-1-26 11:25
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="body">
+                            <p>還不錯的購物網站!</p>
+                        </div>
+                        <div class="top">
+                            <a href="#" class="url">
+                                Allenhsu
+                            </a>
+                            <span class="time">
+                                @ 2020-1-26 10:51
+                                <a href="#" class="replayComment">回復</a>
+                            </span>
+                        </div>
+                    </li>
+                </ol>
+            <!--  會員留言              -->
+                <div id="commentform" style="padding-bottom: 50px">
+                    <h3 id="respond"> 請在以下添加您的留言:</h3>
+                    <form action="#" method="post">
+                        <p>
+                            <textarea cols="80" rows="10" name="user_content"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="提交"></p>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </article>
+        {% endblock %}

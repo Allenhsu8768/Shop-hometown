@@ -1,0 +1,959 @@
+/* name: allenhsu */
+/* date: 2021-01-02*/
+
+/* ===================================================html basic begin=========================================*/
+/*設置 基本 basic */
+body{
+    /* 背景圖 img01.jpg,隨著水平垂直方向平舖*/
+    background: #364047 url("images/img01.jpg") repeat;
+    /* 設置字體樣式 */
+    font-size: 12px;
+    font-weight: 300;
+    /* 字體行寬 line-height */
+    line-height: 1.75em;
+    /* 字體顏色 color */
+    color: #474747;
+    margin: 0px;
+}
+
+/* 清除默認樣式 */
+body,h1,h2,h3,h4,h5,h6,ul,p,ol{
+    margin: 0px;
+    padding: 0px;
+    /* 取消無序列表項目符號*/
+    list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    /* 設置字體樣式 */
+    font-weight: 300;
+    color: #232323;
+}
+
+/* 設置超鏈接文本樣式*/
+a{
+    /* 取消超鏈接下滑線*/
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #085e97;
+}
+
+
+/*設置圖片的垂直對齊問題*/
+img{
+    /*垂直底部對齊 */
+    vertical-align: bottom;
+}
+
+/* 1.設置 header 頭 */
+header{
+    /* 設置 底部外邊聚 2px*/
+    margin-bottom: 2px;
+}
+
+/* 2. 設置 footer */
+footer{
+    /*設置頂部外邊聚*/
+    margin-top: 1em;
+}
+
+/*============================================== html basic end=====================================================*/
+
+
+
+
+/*=========================================Wrapper  begin ===========================================*/
+/* 3. 設置 Wrapper */
+#wrapper{
+    /* 設置 hidden, 文本溢出部分隱藏  */
+    overflow: hidden;
+    /* 將 img02.jpg 水平垂直鋪滿*/
+    background: url("images/img02.jpg") repeat;
+    width: 100%;
+}
+/*========================================Weapper end=====================================================*/
+
+
+
+
+/*==========================================Header begin ===========================================*/
+
+#header{
+    overflow: hidden;
+    /* 設置最低高度為 250px */
+    min-height: 100px;
+    background: url("images/img03.jpg") repeat-x left top;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*=========================================Header end====================================================*/
+
+
+
+
+/*======================================= Pc nav(right-nav 、 left-nav)  begin=======================================================*/
+/* 設置 導航向寬高 及 外邊聚 , 及父元素相對定位設置*/
+#container{
+    position: relative;
+}
+
+/* 設置 nav 導航項*/
+#nav{
+    height: 100px;
+    width: 1040px;
+    /* 設置水平居中 */
+    margin: 0px auto;
+}
+
+/* 設置點選首頁 HOME  h1標籤*/
+#nav .active{
+    position: absolute;
+    float: left;
+    top: 0px;
+    left: 50px;
+}
+
+/* 設置 點選 Home 標籤 連結跳轉,及字型*/
+#nav .active>a{
+    font-size: 65px;
+    font-family: "Brush Script MT","Brush Script Std",cursive;
+}
+
+
+
+
+/*設置 right-nav  ul 右浮動*/
+#nav .right-nav{
+    float: right;
+    position: absolute;
+    height: 105px;
+    top: -20px;
+    right: 50px;
+}
+
+
+/* 設置 right-nav 中  li (Login、Register、Cart、Search) 列表內容左浮動*/
+#nav .right-nav>li{
+    float: left;
+    /* 設置li元素 內邊聚 (左右 5px) */
+    padding: 0px 5px;
+}
+
+
+/* 設置 right-nav 中 li( cart 購物車圖片 位置) */
+#nav .right-nav>li>a>img{
+    position: absolute;
+    top: 20px;
+    right: -20px;
+}
+
+
+#nav .right-nav>li>.user_cart_goods_amount{
+    position: relative;
+    font-weight: bold;
+    right: -20px;
+    top: -65px;
+    color: #94aadb;
+    right: -30px;
+    font-weight: bold;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #ffffff;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+
+
+/* 設置 left-nav ul 左浮動 */
+#nav .left-nav{
+    float: left;
+    height: 70px;
+    position: relative;
+    top: 20px;
+    left: 210px;
+    z-index: 100;
+}
+
+
+
+
+/* 設置 left-nav ul 中的 li(Woman、man、kid、baby、sport)  左浮動 */
+#nav .left-nav li{
+    float: left;
+    padding: 0px 5px;
+}
+
+
+
+/* 設置 nav 中  lef-nav 的 和 左導航 h1標籤的  超鏈接 a 樣式*/
+#nav .left-nav a,.active a{
+    margin-right: 2px;
+    padding: 0px 30px;
+    line-height: 90px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: Microsoft JhengHei;
+    color: #FFFFFF;
+    transition: all .7s;
+}
+
+/* 設置 nav 中 右導航 right-nav 的 超鏈接 a 樣式 ,以及當 用戶登入的span 樣式*/
+#nav .right-nav a, .user_login{
+    margin-right: 1px;
+    padding: 0px 3px;
+    line-height: 90px;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    transition: all .7s;
+}
+
+
+/* 設置 b 標籤 區別 左導航導航功能*/
+#nav .left-nav>li>b{
+    border-left: 2px solid #232323;
+    margin-right: 15px;
+}
+
+/* 設置 b 標籤區別 右導航功能 */
+#nav .right-nav>li>b{
+    border-left: 2px solid #232323;
+    margin-right: 5px;
+}
+
+/* 設置 鼠標標滑過 超鏈接字體顏色改變 */
+#nav .left-nav>li>a:hover{
+    color: #09629c;
+}
+
+#nav .right-nav>li>a:hover{
+    color: #09629c;
+}
+
+#nav .active>a:hover{
+    color: #09629c;
+}
+
+
+/* 設置導航向 搜尋框*/
+#nav .right-nav>.search{
+    position: absolute;
+    top: 70px;
+    right: -5px;
+}
+
+
+
+/* 設置 .right-nav  form 表單中的 type=text 樣式*/
+.right-nav input[type="text"]{
+    box-sizing: border-box;
+    border-right: none;
+    padding: 0px;
+    vertical-align: bottom;
+    height: 24px;
+}
+
+/* 設置 設置 .right-nav  form 表單中的 提交 type=submit 樣式 */
+.right-nav input[type="submit"]{
+    border: none;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    background: url('../images/search.png') no-repeat 0 -1px;
+    vertical-align: bottom;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    cursor: pointer;
+}
+
+/*================================================Pc nav(right-nav 、 left-nav) end===============================*/
+
+
+
+
+/* ==================================mobile-nav  begin========================================*/
+
+/* 設置 mobile 為 固定定位 且設置寬高*/
+#mobile-nav{
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/* 設置 Home 首頁的設置樣式 */
+#mobile-nav .mlogo{
+    color: #C1EDF2;
+    line-height: 50px;
+    font-size: 45px;
+    padding-left:20px;
+    /* 設置 草寫樣式*/
+    font-family: "Brush Script MT","Brush Script Std",cursive;
+}
+
+
+/* 設置 h2 標題標籤*/
+#mobile-nav h2{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    width: 100%;
+    background: url("images/img03.jpg") repeat-x left top;
+}
+
+
+
+/* 設置點擊 展開後 h2　標題標籤效果*/
+#mobile-nav h2.open{
+    width: 100%;
+}
+
+
+/*　設置　mobile 的選單樣式*/
+#mobile-nav dl{
+    display: none;
+    width: 100%;
+    background: rgba(49, 58, 65, 0.7);
+    padding-bottom: 20px;
+    position: relative;
+    top: -14px;
+    z-index: 100;
+}
+
+
+/* 設置 mobile 選單內容*/
+#mobile-nav .list_dt{
+    line-height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 20%;
+    border-bottom: 1px solid #08151f;
+}
+
+
+#mobile-nav .list_dt>a{
+    color: #C1EDF2;
+}
+.list_dd{
+    display: none;
+    text-align: center;
+}
+.list_dd ul{
+    position: relative;
+    right: 20px;
+}
+.list_dd ul li{
+    line-height: 36px;
+}
+.list_dd li a{
+    color: #999;
+}
+.list_dd li a:hover{
+    color: white;
+}
+
+
+
+#mobile-nav h2 .navicon{
+    margin-right: 15px;
+}
+
+/* 設置 點選 的 span 標籤呈現 漢堡盒的樣子 即展開時的樣式*/
+/* 設置 span 標籤 點擊標籤*/
+.navicon{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height:5px;
+    background-color: #FFFFFF;
+    left: 20px;
+    top: 24px;
+    cursor: pointer;
+}
+
+/* 設置 navicon 的 before 和 after 屬性(偽元素) 絕對定位*/
+/* 及過度效果的時間*/
+.navicon:before, .navicon:after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    background-color: #FFFFFF;
+    -webkit-transition: 300ms;
+    transition-duration: 300ms;
+}
+
+
+/* 設置 before 位移方向*/
+.navicon:before{
+    margin-top: -10px;
+}
+
+
+/* 設置 after 位移方向*/
+.navicon:after{
+    margin-top: 10px;
+}
+
+
+
+/* 設置 鼠標滑過超鏈接樣式*/
+#mobile-nav  h2 a:hover{
+    color: #09629c;
+}
+
+
+#mobile-nav .list_dt a:hover{
+    color: #09629c;
+}
+
+/* 設置點擊後 span 標籤 背景色消失*/
+#mobile-nav h2.open .navicon{
+    background: none;
+}
+
+
+/* 設置 點擊展開span 標籤 before transform 改變方向 旋轉45deg 形成一個 X */
+#mobile-nav h2.open .navicon:before{
+    margin-top: 0;
+    /*設置正值 順時針旋轉*/
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 設置 點擊展開 span標籤 after transform 改變方向 逆旋轉 45deg 形成一個 X */
+#mobile-nav h2.open .navicon:after{
+    margin-top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+/* 設置 展開 span 標籤 befor 和 after 的過度效果時間*/
+#mobile-nav h2.open .navicon:before, #mobile-nav h2.open .navicon:after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    background: #FFFFFF;
+    -webkit-transition-property: margin, -webkit-transform;
+    transition-property: margin, -webkit-transform;
+    transition-property: margin, transform;
+    transition-property: margin, transform, -webkit-transform;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+
+
+
+/* 設置 mobile_search 項 樣式 */
+.mobile_search{
+    position: relative;
+    right: -15px;
+}
+
+.mobile_search .mobile_search_form{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#mobile_Search_input{
+    border-radius: 5px;
+    width: 200px;
+}
+
+#mobile_Search_submit{
+    position: relative;
+    right: 25px;
+    top: -1px;
+    border-radius: 5px;
+}
+
+.mobile_search_form input[type="submit"]{
+    border: none;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    background: url('../images/search.png') no-repeat 0 1px;
+    vertical-align: bottom;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+
+
+/* 設置 login / Register / cart 樣式*/
+.list_dt{
+    position: relative;
+}
+.list_dt div{
+    text-align: center;
+}
+
+.list_dt>div>p{
+    position: relative;
+    right: -12px;
+}
+
+.list_dt div>p>a{
+    font-size: 17px;
+    color: #C1EDF2;
+}
+
+.list_dt b{
+    border-left: 2px solid #232323;
+    margin: 15px;
+}
+
+.list_dt img{
+    vertical-align: middle;
+}
+
+/* 未點擊 展開 的 三角朝下*/
+/* 設置 選單 (Woman、Man、Kid、baby、sport 選單展開的三角下標)*/
+.list_dl .list_dt .mobile_traingle{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid black;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+    position: relative;
+    top: 7px;
+    right: -50px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+
+.list_dl .list_dt .mobile_traingle:hover{
+    border-top: 7px solid #C1EDF2;
+}
+
+/* 未點擊 展開 的 三角朝下 點擊展開後 三角朝上*/
+/* 設置 選單 (Woman、Man、Kid、baby、sport 選單展開的三角下標)*/
+.list_dl .list_dt .mobile_traingle.open{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid red;
+    border-left: 7px solid transparent;
+    position: relative;
+    top: -1px;
+    right: -50px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+
+/*=================================================== mobile-nav end ==================================*/
+
+
+
+
+/*==============================================Banner begin========================================*/
+/* 設置 Banner 橫幅 */
+.banner_wrap{
+    width: 77%;
+    margin: 100px auto 0px;
+    padding-bottom: 20px;
+}
+
+.fader {
+    position: relative;
+    padding-top: 50%;
+    font-family: "futura", arial;
+    overflow: hidden;
+}
+
+.fader .slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.fader img.slide {
+    width: 100%;
+}
+
+.fader .prev,
+.fader .next {
+    position: absolute;
+    height: 80px;
+    line-height: 55px;
+    width: 50px;
+    font-size: 100px;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 20px;
+    z-index: 4;
+    margin-top: -25px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 150ms;
+}
+
+#banner:hover .fader_controls .page.prev{opacity: 0.5; left: 15px;}
+#banner:hover .fader_controls .page.next{opacity: 0.5; right: 10px;}
+
+.fader .next {
+    left: auto;
+    right: 15px;
+}
+
+.fader .pager_list {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    bottom: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+.fader .pager_list li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 7px;
+    background: #1d1b1b;
+    opacity: .5;
+    text-indent: -9999px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 150ms;
+}
+
+.fader .pager_list li:hover,.fader .pager_list li.active {
+    opacity: 1;
+}
+
+
+/* 設置清除浮動 利用 hr */
+#wrapper hr{
+    clear: both;
+    width: 70%;
+}
+
+/*==================================================== banner end ==================================*/
+
+
+/*==================================================  index goods _ main begin=====================================*/
+/* 設置主體商品訊息*/
+/* 主體內容容器寬高設置及自動置中*/
+#main_wrapper{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    /*background: #085e97;*/
+}
+
+
+#main_wrapper .item{
+    margin: 15px 0px;
+}
+
+/* 設置類別 字行樣式*/
+#main_wrapper .item>.goods_class>b{
+    font-size: 35px;
+    /*設置草寫樣式*/
+    font-family: "Brush Script MT","Brush Script Std",cursive;
+    color: #0e3047;
+
+}
+
+/* 設置點選 shop ( Woman 、 man 、 kid 、 baby、 sport ) 的 button 樣式*/
+#main_wrapper .item>.goods_class>.shop_more{
+    float: right;
+    outline: none;
+    border: 2px solid #999999;
+    background: none;
+    border-radius: 2px;
+    margin-top: 2px;
+    transition: all .5s;
+    padding: 5px 5px;
+}
+
+#main_wrapper .item>.goods_class>.shop_more>a{
+    font-family: 'Open Sans Condensed','sans-serif';
+    font-size: 15px;
+    font-weight: bold;
+    color: #8b8484;
+    transition: all .5s;
+}
+
+
+#main_wrapper .item>.goods_class>.shop_more:hover{
+    background: #364047;
+}
+
+#main_wrapper .item>.goods_class>.shop_more>a:hover{
+    color: #EBEBEB;
+}
+
+/* 設置類別 與 商品圖片邊聚*/
+#main_wrapper>ul{
+    margin-top: 7px;
+}
+
+/*設置商品圖浮動 */
+#main_wrapper>ul>li{
+    float: left;
+    margin: 5px 15px 15px 9px;
+}
+
+/* 設置水平線清除浮動*/
+#main_wrapper hr{
+    clear: both;
+    width: 100%;
+}
+
+
+/* 設置商品圖片的寬 及 過度效果*/
+#main_wrapper ul>li>p>a>img{
+    width: 330px;
+    transition: all .3s;
+}
+
+/*設置 屬標滑過圖片放大效果 */
+#main_wrapper ul>li>p>a>img:hover{
+    transform: scale(1.05);
+}
+
+
+
+/* 設置商品內容*/
+#main_wrapper ul>li>.content{
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/* 商品名稱*/
+#main_wrapper ul>li>.content>.goods_title{
+     font-size: 1.1em;
+    color: #082870;
+    padding-top: 5px;
+    line-height: 25px;
+    width: 65%;
+    margin: 0px auto;
+    position: relative;
+    right: -15px;
+}
+
+/*商品價格*/
+#main_wrapper ul>li>.content>.goods_price{
+    font-weight: bold;
+    font-size: .9rem;
+    position: relative;
+    right: -25px;
+    display: block;
+    width: 85%;
+}
+
+
+/* 設置點擊購物車*/
+#main_wrapper ul>li>.content>a{
+    float: right;
+    position: relative;
+    right: -10px;
+}
+
+
+/* 設置愛心的樣式*/
+/*設置點擊 div  class = heart 的時候, 鼠標樣式*/
+#main_wrapper ul>li>.content>.heart{
+    cursor: pointer;
+}
+
+/* 設置 span class= heart1 樣式*/
+#main_wrapper ul>li>.content>.heart>.heart1{
+    float: left;
+    position: relative;
+    width: 15px;
+    height: 25px;
+    top: 12px;
+    background: rgb(54, 64, 71);
+    left: 18px;
+    border-radius: 10px 15px 0px 0px;
+    transition: all .5s;
+}
+
+
+
+/* 設置 span class = heart2 樣式*/
+#main_wrapper ul>li>.content>.heart>.heart2{
+    float: left;
+    position: relative;
+    width: 15px;
+    height: 25px;
+    top: 12px;
+    background: rgb(54, 64, 71);
+    left: -5px;
+    border-radius: 15px 10px 0px 0px;
+    transition: all .5s;
+}
+
+
+
+/* 將兩個長方形的 span 標籤 分別往左右旋轉 45deg*/
+/* 設置span  class= heart2  向左旋轉 -45deg*/
+#main_wrapper ul>li>.content>.heart>.heart2{
+    transform: rotate(-45deg);
+}
+
+
+/* 設置 span class=heart1  向右旋轉 45 deg*/
+#main_wrapper ul>li>.content>.heart>.heart1{
+    transform: rotate(45deg);
+}
+
+
+#main_wrapper ul>li>.content>.heart:hover .heart1{
+    background: red;
+}
+#main_wrapper ul>li>.content>.heart:hover .heart2{
+    background: red;
+}
+
+/*=====================================main end====================================================*/
+
+
+
+
+/*==================================footer begin========================*/
+/* 設置 footer */
+footer{
+    height: 100px;
+}
+
+/* 設置 footer 底部 div*/
+footer div{
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 0;
+    width: 80%;
+    position: relative;
+}
+
+/* 設置 foot 的 文字樣式 */
+footer div>p{
+    color: #C1EDF2;
+    float: left;
+    line-height: 44px;
+    font-size: 20px;
+    padding: 36px 0 42px;
+    position: relative;
+    left: 200px;
+}
+
+/* 設置 footer 列表 ul*/
+footer div>ul{
+    float: right;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 256px;
+    position: absolute;
+    top: 30px;
+    right: 300px;
+}
+
+
+
+
+/*設置 footer 列表項 li*/
+footer div>ul>li{
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    width: 44px;
+}
+
+
+/*設置 facebook twitter google pinterest 超連接 */
+footer div>ul>li>a{
+    display: block;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    width: 44px;
+}
+
+
+
+/* 設置 img 圖片過渡時間*/
+footer div>ul>li>a>img{
+    transition: all .3s;
+}
+
+
+
+
+/* 設置 footer 的 底部 連結圖片顯示放大*/
+footer div>ul>li>a>img:hover{
+    transform: scale(1.1);
+}
+
+/*===============================================footer end =====================================*/
+
+
+
+/*=============================================== 頂部返回設置 =====================================*/
+/* 設置 底部 返回頂部連接 */
+.cd-top{
+    display: inline-block;
+    height: 30px;
+    position: fixed;
+    bottom: 40px;
+    width: 30px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.8) url("../images/top.png") no-repeat center;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    bottom: 8px;
+}
+.cd-top.cd-is-visible{
+    visibility: visible;
+    opacity: 1;
+}

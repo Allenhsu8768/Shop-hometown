@@ -1,0 +1,122 @@
+{# 繼承 login.html #}
+{% extends 'login.html' %}
+
+
+{# 修改 主頁面 #}
+{% block register_main %}
+
+{# 註冊成功,請user 做信箱驗證   #}
+{% if msg %}
+    <script type="text/javascript">
+        {# 將後端的 maill url 傳給 js 拼湊 url   #}
+        let maill_url = JSON.parse('{{check_emaill|safe}}');
+
+        {#  source_url 點選取消返回,註冊前頁面     #}
+        let source_url = JSON.parse('{{source_url|safe}}')
+
+        if(confirm('註冊成功! 請至信箱進行驗證!')){
+            location.href = 'https://mail.' + maill_url + '.com/'
+        }else{
+            location.href = source_url
+        }
+    </script>
+{% endif %}
+
+<div class="wrapper">
+    <!--背景圖-->
+    <div class="login_reg_background_img">
+        <img src="/static/images/register_background_img.jpg" alt="">
+    </div>
+    <!-- 註冊主體   -->
+    <div class="reg_main">
+        <div class="register_header">
+            <!-- 標題           -->
+            <h1>Create New  Member !</h1>
+        </div>
+        <p></p>
+        <!--  表單      -->
+        <form action="/register/" method="post" class="register_form">
+        {#  設置 csrf_token 來進行 method post方法 數據請求(django 內建 的 csrf 較安全)      #}
+            {% csrf_token %}
+            <ul class="left-form">
+                <h2>New Member:</h2>
+                <!--  用戶輸入資料-->
+                <!--   以下表框皆設置 div 去清除浮動             -->
+                <!--  用戶(帳號) 必填            -->
+                <li>
+                    <input type="text" name="user_name" placeholder="Username" maxlength="20" id="user_name" required/>
+                    <div class="check_user_name"></div>
+                    <div class="clear"></div>
+                </li>
+                <!--  信箱  必填 -->
+                <li>
+                    <input type="email" name="user_email" placeholder="Email" maxlength="50" id="user_mail"required/>
+                    <div class="check_user_email"></div>
+                    <div class="clear"></div>
+                </li>
+                <!--  用戶密碼   必填       -->
+                <li>
+                    <input type="password" name="pswd" placeholder="Password" maxlength="15" id="pswd" required/>
+                    <div class="clear"></div>
+                </li>
+                <!--  確認密碼  必填-->
+                <li>
+                    <input type="password" name="check_pswd" placeholder="Check_password" maxlength="20" id="check_pswd" required/>
+                    <div class="clear"></div>
+                </li>
+                <!--  中英文姓名 必填  -->
+                <li>
+                    <input type="text" name="user_realname" placeholder="Realname(English/Chinese)" maxlength="20" required/>
+                    <div class="clear"></div>
+                </li>
+                <!--  出生年月日 必填(js腳本判斷是否符合格式,符合才送出表單 給後端)-->
+                <!--  西元年 設定為西元年-->
+                <li>
+                    <span class="birthday_hit"> Please Entered your birthday</span>
+                    <input type="date" name="user_birthday" value="1992-11-15" id="user_birthday" maxlength="10" required/>
+                    <div class="clear"></div>
+                </li>
+                <!--   手機號碼 必填             -->
+                <li>
+                    <input type="text" name="user_phone_number" maxlength="10" placeholder="Phone_number" required/>
+                    <div class="clear"></div>
+                </li>
+                 <!--  國家 非必填 -->
+                <li>
+                    <div class="select">
+                        <select name="country" value="" id="srm_country">
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <!--  居住城市  非必填            -->
+                <li>
+                    <div class="select">
+                        <select name="city" value="" id="srm_city">
+                            <option value="-1"> ----Please Chose Your City ----- </option>
+                            <option value="-2"> ----Please Chose Your Coutry first -----</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <!--  設置隱藏表框,紀錄註冊跳轉來源,方便註冊後跳轉前頁面           -->
+                <input type="hidden" name="source_url" value="{{request.META.HTTP_REFERER}}">
+                <div class="clear"></div>
+                <!--  提交資料 -->
+                <li>
+                    <input type="submit" value="Create_Member" id="send_register_msg">
+                    <button>
+                        <a href="/">Back Home</a>
+                    </button>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </form>
+    </div>
+</div>
+{# ajax 請求 獲得地區的 數據 #}
+<script type="text/javascript">
+    {# 加載 地區國家 數據#}
+    load_country_msg()
+</script>
+{% endblock %}

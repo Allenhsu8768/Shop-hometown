@@ -1,0 +1,71 @@
+@media screen and (max-width: 1535px) {
+    #main_wrapper ul>li{margin: 5px 5px 20px 10px}
+    #main_wrapper ul>li>a>img{width: 310px}
+}
+
+
+
+@media screen and (max-width: 1475px){
+    #main_wrapper ul>li>p>a>img{width: 278px}
+    #main_wrapper ul>li{margin: 5px 20px 20px 20px}
+}
+
+
+
+@media screen and (max-width:1025px ){
+     #main_wrapper ul>li>p>a>img{width: 194px}
+     #main_wrapper ul>li{height: 365px}
+}
+
+
+@media screen and (max-width: 1000px){
+    #main_wrapper ul>li>p>a>img{width: 330px}
+    #main_wrapper ul>li{height: 500px}
+}
+
+
+
+
+
+/* 針對 ipod pro*/
+@media screen and (min-width:985px ) and (max-width: 1366px) {
+    #nav .active>a{font-size: 45px;}
+    #nav .left-nav>li>b{margin: 0px}
+    #nav .right-nav{right: 30px}
+    #nav .left-nav{top: 25px; left: 200px}
+    #nav .active{top: -8px; left: 20px}
+    #nav .left-nav>li{padding: 0px;}
+    #wrapper #description_img{width: 85%;}
+}
+
+
+/* 當畫面被鎖小解析度變小時*/
+@media screen and (max-width: 1000px){
+    .right-nav{display: none;}
+    .user-cart-box{display: none;}
+}
+
+
+/* 所有的 mobile(行動裝置) */
+@media screen and (max-width: 980px){
+    #nav{display: none}
+    #header{background: url("images/img02.jpg") repeat-x left top; min-height: 75px}
+    #mobile-nav{display: block;}
+    .banner_wrap{width: 90%;}
+    .fader img.slide{width: 100%;}
+    .fader{padding-top: 52%}
+    #wrapper>hr{width: 90%}
+    #main_wrapper{width: 90%}
+    #main_wrapper ul>li{margin: 5px 50px 20px 50px;}
+    #wrapper #description_img{width: 90%;}
+}
+
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    footer div>ul>li>a>img{width: 30px;height: 30px;}
+    footer div>ul{top: 5px; right: 80px;}
+}
