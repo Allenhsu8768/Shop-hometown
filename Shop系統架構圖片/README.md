@@ -1,42 +1,47 @@
 #  商城系統主架構
+![1 shop_sys](https://user-images.githubusercontent.com/69343608/136787358-e8dcd34f-f5f0-420a-a1db-b932c62187c4.png)
 
-![1 shop_sys](https://user-images.githubusercontent.com/69343608/136690033-c501e0d5-5115-468d-b433-00cc4d6940a1.png)
+
 
 ###
 
 ##  會員系統
-![2 shop_users_sys](https://user-images.githubusercontent.com/69343608/136690066-26be048d-3f9d-45a0-8105-b7299aae827c.png)
+![2 shop_users_sys](https://user-images.githubusercontent.com/69343608/136787372-c8b3fa81-e9d0-4e0c-9b0d-22001c4c79ac.png)
+
 ###
 
 
 
 
 ##  商品系統
-![3 show_goods_sys](https://user-images.githubusercontent.com/69343608/136690068-d9db34b9-d2fa-4e12-be2d-146d595ad953.png)
+![3 show_goods_sys](https://user-images.githubusercontent.com/69343608/136787374-723ef656-f5f9-4930-b571-8e91ee32506f.png)
+
 ###
 
 
 
 ##  購物車系統
-![4 shop_cartgoods_sys](https://user-images.githubusercontent.com/69343608/136690072-4ca8b07c-f8d2-4a29-82bc-44f9bcfc27f5.png)
+![4 shop_cartgoods_sys](https://user-images.githubusercontent.com/69343608/136787377-4c6d7898-d76f-4d3f-b4a2-0dde194ae9ea.png)
+
 ###
 
 
 
 
 ##  商城資訊系統
-![5 shop_商城資訊系統](https://user-images.githubusercontent.com/69343608/136690074-2f13fc3a-36cc-452d-9e63-55b4fe31a7aa.png)
+![5 shop_商城資訊系統](https://user-images.githubusercontent.com/69343608/136787380-005b18da-c292-4d88-ac14-b7a313585cd7.png)
+
 ##
 
 
 ## 後台管理系統
-![6 shop_後台管理_sys](https://user-images.githubusercontent.com/69343608/136690075-b2fc6e43-6905-4216-a3fa-28943d090f95.png)
+![6 shop_後台管理_sys](https://user-images.githubusercontent.com/69343608/136787387-a3f49065-4013-462c-a6e7-8fb24a084dba.png)
+
 ##
 
 
 
-
-
 ## 商城資料庫關聯圖
-![7 shop_db關聯圖](https://user-images.githubusercontent.com/69343608/136690076-57c9faeb-e1cd-4331-9cc2-1198c9fc33dd.png)
+![7 shop_db關聯圖](https://user-images.githubusercontent.com/69343608/136787391-397ba57e-d064-4160-84e0-ce332fa00698.png)
+
 ##
